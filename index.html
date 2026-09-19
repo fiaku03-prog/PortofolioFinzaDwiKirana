@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finza Dwi Kirana - Portofolio Personal</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        popYellow: '#FFDE59',
+                        popYellowDark: '#E5C433',
+                        popRed: '#FF5757',
+                        popBlue: '#5CE1E6',
+                        popBlueBright: '#38B6FF',
+                        popPink: '#FF66C4',
+                        popGreen: '#7ED957',
+                        popDark: '#1E1E24',
+                        popPurple: '#9333EA',
+                        popBg: '#FAFAF4'
+                    },
+                    fontFamily: {
+                        fun: ['Fredoka', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'pop-sm': '3px 3px 0px #1E1E24',
+                        'pop': '5px 5px 0px #1E1E24',
+                        'pop-lg': '8px 8px 0px #1E1E24',
+                        'pop-xl': '12px 12px 0px #1E1E24',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FAFAF4;
+            color: #1E1E24;
+            background-image: radial-gradient(#1E1E24 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+        }
+
+        .border-pop {
+            border: 3.5px solid #1E1E24;
+        }
+
+        .border-pop-sm {
+            border: 2px solid #1E1E24;
+        }
+
+        .sticker-card {
+            transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .sticker-card:hover {
+            transform: translateY(-6px) rotate(-1deg);
+            box-shadow: 10px 10px 0px #1E1E24;
+        }
+
+        /* 3D Animated Effect for Name Headline */
+        .text-3d-pop {
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 900;
+            color: #FF5757;
+            letter-spacing: 1px;
+            text-shadow: 
+                3px 3px 0px #1E1E24,
+                6px 6px 0px #FFDE59,
+                9px 9px 0px #1E1E24;
+            display: inline-block;
+            animation: float3d 3.5s ease-in-out infinite alternate;
+            transform-style: preserve-3d;
+        }
+
+        @keyframes float3d {
+            0% {
+                transform: translateY(0px) rotateX(0deg) rotateY(0deg) scale(1);
+                text-shadow: 
+                    3px 3px 0px #1E1E24,
+                    6px 6px 0px #FFDE59,
+                    9px 9px 0px #1E1E24;
+            }
+            50% {
+                transform: translateY(-6px) rotateX(4deg) rotateY(-3deg) scale(1.02);
+                text-shadow: 
+                    4px 6px 0px #1E1E24,
+                    8px 10px 0px #38B6FF,
+                    12px 14px 0px #1E1E24;
+            }
+            100% {
+                transform: translateY(-12px) rotateX(-2deg) rotateY(4deg) scale(1.03);
+                text-shadow: 
+                    5px 8px 0px #1E1E24,
+                    10px 14px 0px #FF66C4,
+                    14px 18px 0px #1E1E24;
+            }
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-2deg); }
+            50% { transform: rotate(2deg); }
+        }
+
+        .animate-wiggle {
+            animation: wiggle 3.5s ease-in-out infinite;
+        }
+
+        /* Geometric Badge Decorator */
+        .retro-shape-star {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-popYellow selection:text-popDark">
+
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b-4 border-pop">
+        <div class="max-w-6xl mx-auto px-4 md:px-8 py-3 flex justify-between items-center">
+            
+            <!-- Logo / Brand Title -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 bg-popYellow rounded-2xl border-pop shadow-pop flex items-center justify-center font-fun font-bold text-2xl group-hover:rotate-12 transition-transform">
+                    🎨
+                </div>
+                <div>
+                    <span class="font-fun font-extrabold text-xl md:text-2xl text-popDark block leading-none">FINZA DWI KIRANA</span>
+                    <span class="text-[10px] font-bold tracking-wider text-popRed uppercase font-sans">Graphic Designer & Illustrator</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-6 font-fun text-sm font-bold">
+                <a href="#about" class="hover:text-popRed transition-colors">Tentang Saya</a>
+                <a href="#skills" class="hover:text-popRed transition-colors">Keahlian</a>
+                <a href="#portfolio" class="hover:text-popRed transition-colors">Karya Saya</a>
+                <a href="#pdf-section" class="hover:text-popRed transition-colors">Dokumen PDF</a>
+                <a href="#contact" class="hover:text-popRed transition-colors">Kontak & Sosmed</a>
+            </nav>
+
+            <!-- Action CTA Button -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="https://www.pdffiller.com/s/CNaAyOT4Xe" target="_blank" rel="noopener noreferrer" class="bg-popRed hover:bg-red-600 text-white border-pop px-4 py-2.5 rounded-2xl font-fun font-bold text-xs shadow-pop flex items-center gap-2 transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none">
+                    <i class="fa-solid fa-file-pdf text-sm"></i> Unduh / Buka PDF
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobileMenuBtn" class="md:hidden w-11 h-11 bg-popYellow border-pop rounded-2xl shadow-pop flex items-center justify-center text-xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-popYellow border-t-4 border-pop p-4 font-fun font-bold text-center flex flex-col gap-3">
+            <a href="#about" onclick="toggleMobileMenu()" class="py-2 bg-white rounded-xl border-pop-sm shadow-pop-sm">Tentang Saya</a>
+            <a href="#skills" onclick="toggleMobileMenu()" class="py-2 bg-white rounded-xl border-pop-sm shadow-pop-sm">Keahlian</a>
+            <a href="#portfolio" onclick="toggleMobileMenu()" class="py-2 bg-white rounded-xl border-pop-sm shadow-pop-sm">Karya Saya</a>
+            <a href="#pdf-section" onclick="toggleMobileMenu()" class="py-2 bg-white rounded-xl border-pop-sm shadow-pop-sm">Dokumen PDF</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="py-2 bg-white rounded-xl border-pop-sm shadow-pop-sm">Kontak & Sosmed</a>
+            <a href="https://www.pdffiller.com/s/CNaAyOT4Xe" target="_blank" rel="noopener noreferrer" class="bg-popRed text-white border-pop py-3 rounded-xl shadow-pop flex items-center justify-center gap-2">
+                <i class="fa-solid fa-file-pdf"></i> Unduh / Buka PDF Portofolio
+            </a>
+        </div>
+    </header>
+
+    <section id="about" class="max-w-6xl mx-auto px-4 md:px-8 py-8 md:py-14">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            
+            <!-- Hero Left Info -->
+            <div class="lg:col-span-7 bg-white border-pop rounded-3xl p-6 sm:p-8 shadow-pop-lg flex flex-col justify-between relative overflow-hidden">
+                <!-- Decorative Geometric Retro Shape -->
+                <div class="absolute -top-6 -right-6 w-20 h-20 bg-popBlue rounded-full border-pop opacity-30 pointer-events-none"></div>
+                <div class="absolute -bottom-8 -left-8 w-24 h-24 bg-popPink rounded-full border-pop opacity-20 pointer-events-none"></div>
+
+                <div class="space-y-4 relative z-10">
+                    <div class="inline-flex items-center gap-2 bg-popYellow px-4 py-2 rounded-2xl border-pop shadow-pop font-fun font-bold text-xs text-popDark animate-wiggle">
+                        <span>👋 Halo, Salam Kenal!</span>
+                    </div>
+
+                    <!-- MAIN NAME PROMINENT HEADLINE -->
+                    <div class="py-1 overflow-visible">
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-none">
+                            <span class="text-3d-pop">FINZA DWI KIRANA</span>
+                        </h1>
+                    </div>
+
+                    <p class="text-xs sm:text-sm md:text-base font-bold text-popRed tracking-wide uppercase font-fun">
+                        Desainer Grafis • Ilustrator Maskot • Microstock Contributor
+                    </p>
+
+                    <p class="text-sm md:text-base font-medium text-gray-800 leading-relaxed">
+                        Saya <strong class="text-popRed font-bold">Finza Dwi Kirana</strong>, alumni SMK Negeri 1 Kebumen jurusan Desain Komunikasi Visual (DKV, Lulus 2026) & Mahasiswa Universitas Putra Bangsa Kebumen. Spesialis dalam <strong class="text-popDark">Desain Grafis, Visual Branding, Ilustrasi Maskot, Packaging Design, UI/UX, dan Contributor Microstock (10.000+ Aset Vektor)</strong>.
+                    </p>
+
+                    <!-- Hero Key Achievement Badges -->
+                    <div class="flex flex-wrap gap-2.5 pt-2">
+                        <span class="bg-popBlue text-popDark text-xs font-fun font-bold px-3.5 py-2 rounded-2xl border-pop-sm shadow-pop flex items-center gap-1.5">
+                            <i class="fa-solid fa-trophy text-amber-600"></i> Juara 1 LKS Graphic Design 2026
+                        </span>
+                        <span class="bg-popPurple text-white text-xs font-fun font-bold px-3.5 py-2 rounded-2xl border-pop-sm shadow-pop flex items-center gap-1.5">
+                            <i class="fa-solid fa-medal text-popYellow"></i> Top 5 LKS Provinsi 2026
+                        </span>
+                        <span class="bg-popPink text-white text-xs font-fun font-bold px-3.5 py-2 rounded-2xl border-pop-sm shadow-pop flex items-center gap-1.5">
+                            <i class="fa-solid fa-palette"></i> 10k+ Aset Microstock
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap gap-3 pt-6 relative z-10">
+                    <a href="#portfolio" class="bg-popYellow hover:bg-popYellowDark text-popDark border-pop px-6 py-3.5 rounded-2xl shadow-pop font-fun font-bold text-sm sm:text-base flex items-center gap-2 hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
+                        <i class="fa-solid fa-palette text-popRed"></i> Lihat Karya Saya
+                    </a>
+                    <a href="https://www.pdffiller.com/s/CNaAyOT4Xe" target="_blank" rel="noopener noreferrer" class="bg-popBlueBright hover:bg-blue-600 text-white border-pop px-6 py-3.5 rounded-2xl shadow-pop font-fun font-bold text-sm sm:text-base flex items-center gap-2 hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
+                        <i class="fa-solid fa-file-pdf"></i> Unduh / Buka File PDF
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 flex flex-col">
+                <div class="bg-white border-pop rounded-3xl p-6 shadow-pop-lg h-full flex flex-col justify-between relative overflow-hidden">
+                    
+                    <!-- Mac-style browser bar header -->
+                    <div>
+                        <div class="bg-popYellow border-2 border-pop rounded-2xl p-3 mb-5 flex justify-between items-center shadow-pop-sm">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3.5 h-3.5 bg-popRed rounded-full border-pop-sm inline-block"></span>
+                                <span class="w-3.5 h-3.5 bg-popYellowDark rounded-full border-pop-sm inline-block"></span>
+                                <span class="w-3.5 h-3.5 bg-popGreen rounded-full border-pop-sm inline-block"></span>
+                            </div>
+                            <span class="font-fun font-extrabold text-xs text-popDark tracking-wider">PROFIL SINGKAT SAYA</span>
+                        </div>
+
+                        <!-- Structured Profile Details -->
+                        <div class="space-y-3 font-sans text-sm">
+                            <div class="p-3.5 bg-red-50 border-2 border-pop rounded-2xl flex items-center justify-between gap-3 shadow-pop-sm">
+                                <div>
+                                    <span class="text-[10px] text-popRed font-extrabold uppercase font-fun tracking-wider block">Nama Lengkap</span>
+                                    <span class="text-base font-extrabold text-popDark">Finza Dwi Kirana</span>
+                                </div>
+                                <span class="bg-popRed text-white text-[11px] font-fun font-bold px-3 py-1.5 rounded-xl border-pop-sm shadow-pop-sm shrink-0">
+                                    Graphic Designer
+                                </span>
+                            </div>
+
+                            <div class="p-3.5 bg-blue-50 border-2 border-pop rounded-2xl space-y-1 shadow-pop-sm">
+                                <span class="text-[10px] text-popBlueBright font-extrabold uppercase font-fun tracking-wider block">Pendidikan & Domisili</span>
+                                <span class="font-extrabold text-popDark block text-sm">SMK Negeri 1 Kebumen (DKV - Lulus 2026)</span>
+                                <span class="text-xs text-gray-700 font-bold block">Mahasiswa Universitas Putra Bangsa Kebumen</span>
+                                <span class="text-xs text-gray-600 font-semibold block pt-0.5"><i class="fa-solid fa-location-dot text-popRed"></i> Kebumen, Jawa Tengah, Indonesia</span>
+                            </div>
+
+                            <div class="p-3.5 bg-yellow-50 border-2 border-pop rounded-2xl shadow-pop-sm">
+                                <span class="text-[10px] text-amber-800 font-extrabold uppercase font-fun tracking-wider block">Software & Hardware</span>
+                                <span class="font-bold text-popDark text-xs leading-relaxed block mt-0.5">
+                                    Adobe Illustrator, Photoshop, InDesign, Figma, Canva, CapCut & Premiere
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 p-3.5 bg-green-50 border-2 border-pop rounded-2xl flex items-center justify-between shadow-pop-sm">
+                        <div>
+                            <span class="text-[10px] text-green-700 font-extrabold uppercase font-fun tracking-wider block">Status Ketersediaan</span>
+                            <span class="font-extrabold text-green-900 text-sm">Open for Freelance & Project</span>
+                        </div>
+                        <div class="relative flex items-center justify-center w-4 h-4">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="skills" class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+        <div class="bg-white border-pop rounded-3xl p-6 md:p-8 shadow-pop-lg">
+            <div class="text-center max-w-xl mx-auto mb-8">
+                <span class="bg-popYellow text-popDark font-fun font-bold text-xs px-4 py-1.5 rounded-full border-pop shadow-pop uppercase inline-block mb-2">
+                    🛠️ Perangkat & Keahlian
+                </span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-popDark">Software & Spesialisasi</h2>
+                <p class="text-gray-600 font-medium text-xs sm:text-sm mt-1">Perangkat lunak dan bidang keahlian desain yang dikuasai secara profesional.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-center font-fun">
+                
+                <div class="p-4 bg-orange-100 border-pop rounded-2xl shadow-pop flex flex-col items-center justify-center gap-2 hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 bg-white border-pop rounded-xl flex items-center justify-center text-2xl text-orange-600 shadow-pop-sm">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+                    <span class="font-bold text-sm text-popDark mt-1">Adobe Illustrator</span>
+                    <span class="text-[10px] font-bold text-gray-600">Vector, Logo & Maskot</span>
+                </div>
+
+                <div class="p-4 bg-blue-100 border-pop rounded-2xl shadow-pop flex flex-col items-center justify-center gap-2 hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 bg-white border-pop rounded-xl flex items-center justify-center text-2xl text-blue-600 shadow-pop-sm">
+                        <i class="fa-solid fa-image"></i>
+                    </div>
+                    <span class="font-bold text-sm text-popDark mt-1">Adobe Photoshop</span>
+                    <span class="text-[10px] font-bold text-gray-600">Editing Foto & Mockup</span>
+                </div>
+
+                <div class="p-4 bg-pink-100 border-pop rounded-2xl shadow-pop flex flex-col items-center justify-center gap-2 hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 bg-white border-pop rounded-xl flex items-center justify-center text-2xl text-popPink shadow-pop-sm">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <span class="font-bold text-sm text-popDark mt-1">Adobe InDesign</span>
+                    <span class="text-[10px] font-bold text-gray-600">Layout PDF & Editorial</span>
+                </div>
+
+                <div class="p-4 bg-purple-100 border-pop rounded-2xl shadow-pop flex flex-col items-center justify-center gap-2 hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 bg-white border-pop rounded-xl flex items-center justify-center text-2xl text-purple-600 shadow-pop-sm">
+                        <i class="fa-solid fa-figma"></i>
+                    </div>
+                    <span class="font-bold text-sm text-popDark mt-1">Figma UI/UX</span>
+                    <span class="text-[10px] font-bold text-gray-600">Prototyping Mobile App</span>
+                </div>
+
+                <div class="p-4 bg-red-100 border-pop rounded-2xl shadow-pop flex flex-col items-center justify-center gap-2 hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 bg-white border-pop rounded-xl flex items-center justify-center text-2xl text-popRed shadow-pop-sm">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <span class="font-bold text-sm text-popDark mt-1">CapCut & Premiere</span>
+                    <span class="text-[10px] font-bold text-gray-600">Editing Video & Reels</span>
+                </div>
+
+                <div class="p-4 bg-green-100 border-pop rounded-2xl shadow-pop flex flex-col items-center justify-center gap-2 hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 bg-white border-pop rounded-xl flex items-center justify-center text-2xl text-green-600 shadow-pop-sm">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </div>
+                    <span class="font-bold text-sm text-popDark mt-1">Microstock Vector</span>
+                    <span class="text-[10px] font-bold text-gray-600">10k+ Asset Contributor</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="pdf-section" class="max-w-6xl mx-auto px-4 md:px-8 py-6">
+        <div class="bg-popYellow border-pop rounded-3xl p-6 md:p-8 shadow-pop-lg">
+            
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+                <div>
+                    <span class="bg-popRed text-white font-fun font-bold text-xs px-3.5 py-1.5 rounded-full border-pop shadow-pop uppercase tracking-wider inline-block mb-2">
+                        📄 Dokumen Portofolio Resmi
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-popDark">
+                        File PDF Portofolio Finza Dwi Kirana
+                    </h2>
+                    <p class="text-gray-800 font-semibold text-xs sm:text-sm mt-1">Unduh atau tinjau berkas PDF resmi terbaru yang telah disusun secara rapi.</p>
+                </div>
+
+                <!-- PDF Action Controls -->
+                <div class="flex flex-wrap gap-2.5">
+                    <button onclick="openPdfModal()" class="bg-white hover:bg-gray-100 text-popDark border-pop px-4 py-2.5 rounded-2xl font-fun font-bold text-xs sm:text-sm shadow-pop flex items-center gap-2 transition-all">
+                        <i class="fa-solid fa-expand text-popPink"></i> Pratinjau Modal
+                    </button>
+                    <a href="https://www.pdffiller.com/s/CNaAyOT4Xe" target="_blank" rel="noopener noreferrer" onclick="showToast('📄 Membuka PDF Portofolio...')" class="bg-popRed hover:bg-red-600 text-white border-pop px-5 py-2.5 rounded-2xl font-fun font-bold text-xs sm:text-sm shadow-pop flex items-center gap-2 transition-all hover:scale-105">
+                        <i class="fa-solid fa-download"></i> Unduh / Buka File PDF
+                    </a>
+                </div>
+            </div>
+
+            <!-- PDF Viewer Card Frame -->
+            <div class="bg-white border-pop rounded-2xl overflow-hidden shadow-pop relative">
+                <div class="bg-popDark border-b-2 border-pop p-3 flex justify-between items-center text-white">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 bg-popRed rounded-full inline-block"></span>
+                        <span class="w-3 h-3 bg-popYellow rounded-full inline-block"></span>
+                        <span class="w-3 h-3 bg-popGreen rounded-full inline-block"></span>
+                        <span class="font-fun font-bold text-xs ml-2 text-popYellow">PORTOFOLIO FINZA DWI KIRANA (PDF Online)</span>
+                    </div>
+                    <span class="text-[10px] font-bold font-fun bg-popRed text-white px-2.5 py-0.5 rounded-md">File Resmi PDF</span>
+                </div>
+
+                <!-- Embedded PDF Preview Details -->
+                <div class="p-6 md:p-10 bg-slate-50 flex flex-col items-center justify-center text-center min-h-[280px]">
+                    <div class="w-20 h-20 bg-popRed text-white rounded-2xl border-pop shadow-pop flex items-center justify-center text-4xl mb-4 animate-bounce">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </div>
+                    <h3 class="font-fun font-extrabold text-2xl text-popDark mb-2">PORTOFOLIO FINZA DWI KIRANA</h3>
+                    <p class="text-xs sm:text-sm font-medium text-gray-600 max-w-lg mb-6 leading-relaxed">
+                        File PDF ini memuat portofolio lengkap: Logo UMKM (Chickroll, Dee-S, Aba Muslim, dll), Ilustrasi Maskot (Burung IKN, Chikzo, Leaf Doctor), Kemasan Products, UI/UX Formiq, Videografi Batik Sekar Jagad, serta Sertifikat Juara 1 LKS 2026.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <a href="https://www.pdffiller.com/s/CNaAyOT4Xe" target="_blank" rel="noopener noreferrer" onclick="showToast('📄 Membuka link PDF Portofolio...')" class="bg-popYellow hover:bg-popYellowDark text-popDark border-pop px-6 sm:px-8 py-3 rounded-2xl shadow-pop font-fun font-bold text-sm sm:text-base flex items-center gap-3 transition-all hover:scale-105">
+                            <i class="fa-solid fa-cloud-arrow-down text-popRed text-xl"></i> Klik Di Sini Untuk Unduh / Lihat PDF
+                        </a>
+                        <a href="https://www.pdffiller.com/s/CNaAyOT4Xe" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-gray-100 text-popDark border-pop px-5 sm:px-6 py-3 rounded-2xl shadow-pop font-fun font-bold text-sm sm:text-base flex items-center gap-2 transition-all">
+                            <i class="fa-solid fa-eye text-popBlueBright"></i> Tab Baru
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="portfolio" class="max-w-6xl mx-auto px-4 md:px-8 py-8">
+        <div class="bg-white border-pop rounded-3xl p-6 md:p-8 shadow-pop-lg">
+            
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-8">
+                <div>
+                    <span class="bg-popRed text-white font-fun font-bold text-xs px-3.5 py-1.5 rounded-full border-pop shadow-pop uppercase tracking-wider inline-block mb-2">
+                        🎨 Galeri Karya Lengkap
+                    </span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-popDark uppercase tracking-tight">
+                        APA SAJA YANG SUDAH DI BUAT ?
+                    </h2>
+                    <p class="text-gray-700 font-semibold text-xs sm:text-sm mt-1">
+                        Cek selengkapnya di PDF portofolio saya
+                    </p>
+                </div>
+
+                <!-- Category Filter Buttons -->
+                <div class="flex flex-wrap gap-2 font-fun text-xs font-bold" id="galleryFilters">
+                    <button onclick="filterGallery('all')" class="filter-btn active bg-popYellow text-popDark px-3.5 py-2 rounded-xl border-pop shadow-pop hover:bg-popYellowDark transition-all">
+                        Semua Karya
+                    </button>
+                    <button onclick="filterGallery('logo')" class="filter-btn bg-white text-popDark px-3.5 py-2 rounded-xl border-pop shadow-pop hover:bg-popYellow transition-all">
+                        Logo
+                    </button>
+                    <button onclick="filterGallery('mascot')" class="filter-btn bg-white text-popDark px-3.5 py-2 rounded-xl border-pop shadow-pop hover:bg-popYellow transition-all">
+                        Maskot
+                    </button>
+                    <button onclick="filterGallery('branding')" class="filter-btn bg-white text-popDark px-3.5 py-2 rounded-xl border-pop shadow-pop hover:bg-popYellow transition-all">
+                        Branding & Kemasan
+                    </button>
+                    <button onclick="filterGallery('poster')" class="filter-btn bg-white text-popDark px-3.5 py-2 rounded-xl border-pop shadow-pop hover:bg-popYellow transition-all">
+                        Poster & Spanduk
+                    </button>
+                    <button onclick="filterGallery('uiux')" class="filter-btn bg-white text-popDark px-3.5 py-2 rounded-xl border-pop shadow-pop hover:bg-popYellow transition-all">
+                        UI/UX
+                    </button>
+                    <button onclick="filterGallery('video')" class="filter-btn bg-white text-popDark px-3.5 py-2 rounded-xl border-pop shadow-pop hover:bg-popYellow transition-all">
+                        Video
+                    </button>
+                    <button onclick="filterGallery('cert')" class="filter-btn bg-white text-popDark px-3.5 py-2 rounded-xl border-pop shadow-pop hover:bg-popYellow transition-all">
+                        Prestasi & Microstock
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolioGrid">
+                
+                <!-- Item 1: Logo Collection -->
+                <div class="portfolio-item logo sticker-card p-6 rounded-2xl bg-yellow-50 border-pop shadow-pop flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-popYellow text-popDark text-xs font-fun font-bold px-3 py-1 rounded-full border-pop-sm">Koleksi Logo</span>
+                            <span class="text-xs font-extrabold text-gray-500 font-fun">PDF Hal. 4</span>
+                        </div>
+                        <h3 class="font-fun font-bold text-xl text-popDark mb-2">Desain Logo UMKM & Brand (Chickroll & Dee-S)</h3>
+                        <p class="text-xs sm:text-sm font-medium text-gray-700 leading-relaxed mb-4">
+                            Pengembangan logo identitas brand: Chickroll Crispy, Dee-S Cafe & Karaoke, Aba Muslim, Elysian, Cenero, Cipta IT, Teman Tanaman, Gen Z, Homestead, Rice Bowl, Dimus, Pastry, Gedhang Eco, Rajamala Surakarta.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t-2 border-dashed border-gray-300 flex justify-between items-center text-xs font-bold text-gray-700">
+                        <span><i class="fa-solid fa-palette text-popRed"></i> Adobe Illustrator</span>
+                        <span class="text-popRed font-extrabold">🥇 Juara 1 LKS 2026</span>
+                    </div>
+                </div>
+
+                <!-- Item 2: Logo Hari Jadi Kebumen & Jawa Tengah -->
+                <div class="portfolio-item logo branding sticker-card p-6 rounded-2xl bg-red-50 border-pop shadow-pop flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-popRed text-white text-xs font-fun font-bold px-3 py-1 rounded-full border-pop-sm">Logo Daerah</span>
+                            <span class="text-xs font-extrabold text-gray-500 font-fun">PDF Hal. 6-7</span>
+                        </div>
+                        <h3 class="font-fun font-bold text-xl text-popDark mb-2">Logo 81 th Jawa Tengah & Hari Jadi Kebumen ke-397</h3>
+                        <p class="text-xs sm:text-sm font-medium text-gray-700 leading-relaxed mb-4">
+                            Desain logo peringatan daerah resmi beserta filosofi logo, komposisi warna, palet Poppins typography, dan panduan penggunaan identitas visual.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t-2 border-dashed border-gray-300 flex justify-between items-center text-xs font-bold text-gray-700">
+                        <span><i class="fa-solid fa-award text-amber-500"></i> Visual Branding</span>
+                        <span class="text-popDark font-extrabold">Filosofi & Standard</span>
+                    </div>
+                </div>
+
+                <!-- Item 3: Mascot Burung IKN & Swallow Bird -->
+                <div class="portfolio-item mascot sticker-card p-6 rounded-2xl bg-blue-50 border-pop shadow-pop flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-popBlue text-popDark text-xs font-fun font-bold px-3 py-1 rounded-full border-pop-sm">Karakter Maskot</span>
+                            <span class="text-xs font-extrabold text-gray-500 font-fun">PDF Hal. 5</span>
+                        </div>
+                        <h3 class="font-fun font-bold text-xl text-popDark mb-2">Maskot Burung IKN, Elang & Burung Wallet Kebumen</h3>
+                        <p class="text-xs sm:text-sm font-medium text-gray-700 leading-relaxed mb-4">
+                            Rancangan karakter ilustrasi maskot burung elang bertema IKN Nusantara, maskot burung walet ramah, maskot ayam Chikzo, serta maskot burung biru futuristis berteknologi.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t-2 border-dashed border-gray-300 flex justify-between items-center text-xs font-bold text-gray-700">
+                        <span><i class="fa-solid fa-feather text-popBlueBright"></i> Flat Vector Mascot</span>
+                        <span class="text-popBlueBright font-extrabold">Master Vector AI</span>
+                    </div>
+                </div>
+
+                <!-- Item 4: Chikzo & Kopi Senja Packaging -->
+                <div class="portfolio-item branding sticker-card p-6 rounded-2xl bg-amber-50 border-pop shadow-pop flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-amber-400 text-popDark text-xs font-fun font-bold px-3 py-1 rounded-full border-pop-sm">Kemasan Box</span>
+                            <span class="text-xs font-extrabold text-gray-500 font-fun">PDF Hal. 8</span>
+                        </div>
+                        <h3 class="font-fun font-bold text-xl text-popDark mb-2">Visual Branding Chikzo Box & Packaging Kopi Senja</h3>
+                        <p class="text-xs sm:text-sm font-medium text-gray-700 leading-relaxed mb-4">
+                            Desain kemasan box snack Chikzo, desain stiker label, cup minuman "Nikmati Harimu Dengan Kopi Senja", dan materi promosi cafe.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t-2 border-dashed border-gray-300 flex justify-between items-center text-xs font-bold text-gray-700">
+                        <span><i class="fa-solid fa-box text-amber-700"></i> Packaging Die-Cut</span>
+                        <span class="text-amber-800 font-extrabold">Label & Cup Print</span>
+                    </div>
+                </div>
+
+                <!-- Item 5: Pastry Box & Spanduk Galeri Seni Rajamala -->
+                <div class="portfolio-item branding poster sticker-card p-6 rounded-2xl bg-pink-50 border-pop shadow-pop flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-popPink text-white text-xs font-fun font-bold px-3 py-1 rounded-full border-pop-sm">Kemasan & Spanduk</span>
+                            <span class="text-xs font-extrabold text-gray-500 font-fun">PDF Hal. 9</span>
+                        </div>
+                        <h3 class="font-fun font-bold text-xl text-popDark mb-2">Pastry Box & Spanduk Galeri Seni Rajamala Surakarta</h3>
+                        <p class="text-xs sm:text-sm font-medium text-gray-700 leading-relaxed mb-4">
+                            Perancangan dus kemasan kue pastry motif unik dan spanduk pameran kebudayaan "Galeri Seni Rupa Rajamala Surakarta - Temukan Karya Warisan Seniman Kita".
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t-2 border-dashed border-gray-300 flex justify-between items-center text-xs font-bold text-gray-700">
+                        <span><i class="fa-solid fa-map text-popPink"></i> Media Outdoor</span>
+                        <span class="text-popPink font-extrabold">Cetak Promosi</span>
+                    </div>
+                </div>
+
+                <!-- Item 6: Label Produk Moci, Lavender, Rooty -->
+                <div class="portfolio-item branding sticker-card p-6 rounded-2xl bg-green-50 border-pop shadow-pop flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-popGreen text-popDark text-xs font-fun font-bold px-3 py-1 rounded-full border-pop-sm">Stiker Label</span>
+                            <span class="text-xs font-extrabold text-gray-500 font-fun">PDF Hal. 10</span>
+                        </div>
+                        <h3 class="font-fun font-bold text-xl text-popDark mb-2">Desain Packaging Bottle & Label (Moci, Rooty, Tavo)</h3>
+                        <p class="text-xs sm:text-sm font-medium text-gray-700 leading-relaxed mb-4">
+                            Koleksi rancangan stiker botol minuman, kemasan snack CrispyGo, roti Rooty, Moci manis, Tavo packaging, dan kosmetik Lavender.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t-2 border-dashed border-gray-300 flex justify-between items-center text-xs font-bold text-gray-700">
+                        <span><i class="fa-solid fa-bottle-water text-green-700"></i> Label Stiker</span>
+                        <span class="text-green-800 font-extrabold">Mockup Botol & Box</span>
+                    </div>
+                </div>
+
+                <!-- Item 7: Collection of Commercial Banners & Posters -->
+                <div class="portfolio-item poster sticker-card p-6 rounded-2xl bg-purple-50 border-pop shadow-pop flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-popPurple text-white text-xs font-fun font-bold px-3 py-1 rounded-full border-pop-sm">Desain Poster</span>
+                            <span class="text-xs font-extrabold text-gray-500 font-fun">PDF Hal. 11</span>
+                        </div>
+                        <h3 class="font-fun font-bold text-xl text-popDark mb-2">Poster Hanasui, IKN Kota Cerdas, Sedekah Bumi & Maulid</h3>
+                        <p class="text-xs sm:text-sm font-medium text-gray-700 leading-relaxed mb-4">
+                            Kumpulan poster iklan komersial: Paket Makeup Hanasui Power, Poster Kampanye IKN Kota Cerdas Masa Depan, Edukasi Satwa Terancam Punah, Sedekah Bumi, Maulid Nabi, dan Stop Gadget.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t-2 border-dashed border-gray-300 flex justify-between items-center text-xs font-bold text-gray-700">
+                        <span><i class="fa-solid fa-bullhorn text-popPurple"></i> Commercial Flyer</span>
+                        <span class="text-popPurple font-extrabold">Media Cetak & Digital</span>
+                    </div>
+                </div>
+
+                <!-- Item 8: UI/UX Formiq Mobile App -->
+                <div class="portfolio-item uiux sticker-card p-6 rounded-2xl bg-indigo-50 border-pop shadow-pop flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-indigo-600 text-white text-xs font-fun font-bold px-3 py-1 rounded-full border-pop-sm">UI/UX Figma</span>
+                            <span class="text-xs font-extrabold text-gray-500 font-fun">PDF Hal. 12</span>
+                        </div>
+                        <h3 class="font-fun font-bold text-xl text-popDark mb-2">Aplikasi Mobile UI/UX "FORMIQ" (Top Up & Voucher)</h3>
+                        <p class="text-xs sm:text-sm font-medium text-gray-700 leading-relaxed mb-4">
+                            Perancangan user interface aplikasi mobile Formiq untuk layanan transaksi top up game, paket data kuota, riwayat pesanan, profil akun, dan keranjang belanja interaktif.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t-2 border-dashed border-gray-300 flex justify-between items-center text-xs font-bold text-gray-700">
+                        <span><i class="fa-solid fa-mobile-screen-button text-indigo-600"></i> Figma Prototype</span>
+                        <span class="text-indigo-800 font-extrabold">Interaktif</span>
+                    </div>
+                </div>
+
+                <!-- Item 9: Video Editing Batik Sekar Jagad & School Release -->
+                <div class="portfolio-item video sticker-card p-6 rounded-2xl bg-red-100 border-pop shadow-pop flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-popRed text-white text-xs font-fun font-bold px-3 py-1 rounded-full border-pop-sm">Editing Video</span>
+                            <span class="text-xs font-extrabold text-gray-500 font-fun">PDF Hal. 15</span>
+                        </div>
+                        <h3 class="font-fun font-bold text-xl text-popDark mb-2">Dokumenter Batik Sekar Jagad & Video Pelepasan SD N 2 Wonosari</h3>
+                        <p class="text-xs sm:text-sm font-medium text-gray-700 leading-relaxed mb-4">
+                            Kameramen 2 & Editor Video Dokumenter Kebudayaan "Batik Sekar Jagad" (Juara 2 Video Jambore Kebumen), Video Ucapan HUT SMK N 1 Kebumen ke-59, dan Dokumentasi Pelepasan SD N 2 Wonosari.
+                        </p>
+                    </div>
+                    <div class="space-y-2 pt-3 border-t-2 border-dashed border-gray-300 text-xs font-bold">
+                        <a href="https://youtu.be/AEfmSZQ17IM?si=bZ5d5thuB5S4Mlye" target="_blank" class="text-popRed flex items-center justify-between hover:underline">
+                            <span><i class="fa-brands fa-youtube text-red-600"></i> Tonton Dokumenter Batik</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <a href="https://youtu.be/ABnFAXfvo0k?si=TISO005-eELx3pBh" target="_blank" class="text-popBlueBright flex items-center justify-between hover:underline">
+                            <span><i class="fa-brands fa-youtube text-red-600"></i> Video Perpisahan SD</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <a href="https://www.instagram.com/reel/DSrx1viEmDy/" target="_blank" class="text-popPink flex items-center justify-between hover:underline">
+                            <span><i class="fa-brands fa-instagram text-pink-600"></i> Reel Pelepasan SD N 2</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 10: Microstock Vector Assets 10,000+ -->
+                <div class="portfolio-item cert sticker-card p-6 rounded-2xl bg-teal-50 border-pop shadow-pop flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-teal-500 text-white text-xs font-fun font-bold px-3 py-1 rounded-full border-pop-sm">Microstock Contributor</span>
+                            <span class="text-xs font-extrabold text-gray-500 font-fun">PDF Hal. 16</span>
+                        </div>
+                        <h3 class="font-fun font-bold text-xl text-popDark mb-2">10.000+ Aset Vektor Microstock (Adobe Stock, Canva, Shutterstock)</h3>
+                        <p class="text-xs sm:text-sm font-medium text-gray-700 leading-relaxed mb-4">
+                            Kontributor aktif karya ilustrasi, ikon, dan elemen grafis vektor dengan portofolio lebih dari 10.000 aset digital terverifikasi di Adobe Stock, Canva Contributor, dan Shutterstock Impact Awards.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t-2 border-dashed border-gray-300 flex justify-between items-center text-xs font-bold text-teal-800">
+                        <span><i class="fa-solid fa-cloud-arrow-up text-teal-600"></i> Adobe Stock & Canva</span>
+                        <span class="font-extrabold">10k+ Digital Assets</span>
+                    </div>
+                </div>
+
+                <!-- Item 11: Prestasi Juara 1 LKS & Top 5 Provinsi 2026 -->
+                <div class="portfolio-item cert sticker-card p-6 rounded-2xl bg-yellow-100 border-pop shadow-pop flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-popYellow text-popDark text-xs font-fun font-bold px-3 py-1 rounded-full border-pop-sm">Penghargaan LKS</span>
+                            <span class="text-xs font-extrabold text-gray-500 font-fun">PDF Hal. 17</span>
+                        </div>
+                        <h3 class="font-fun font-bold text-xl text-popDark mb-2">Sertifikat Juara 1 LKS Graphic Design 2026 & Prakerin</h3>
+                        <p class="text-xs sm:text-sm font-medium text-gray-700 leading-relaxed mb-4">
+                            Juara 1 Lomba Kompetensi Siswa (LKS) Graphic Design Technology Kabupaten Kebumen 2026, Top 5 LKS Provinsi 2026, Sertifikat Pelatihan LKSN, dan Sertifikat Praktik Kerja Industri DKV.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t-2 border-dashed border-gray-300 flex justify-between items-center text-xs font-bold text-amber-800">
+                        <span><i class="fa-solid fa-trophy text-amber-600"></i> Kebumen & Jawa Tengah</span>
+                        <span class="font-extrabold">Sertifikat Resmi</span>
+                    </div>
+                </div>
+
+                <!-- Item 12: Ilustrasi & Vektor Elemen Dekoratif -->
+                <div class="portfolio-item mascot sticker-card p-6 rounded-2xl bg-emerald-50 border-pop shadow-pop flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-emerald-500 text-white text-xs font-fun font-bold px-3 py-1 rounded-full border-pop-sm">Ilustrasi & Elemen</span>
+                            <span class="text-xs font-extrabold text-gray-500 font-fun">PDF Hal. 13-14</span>
+                        </div>
+                        <h3 class="font-fun font-bold text-xl text-popDark mb-2">Elemen Dekoratif Flat Vector & Ilustrasi Karakter</h3>
+                        <p class="text-xs sm:text-sm font-medium text-gray-700 leading-relaxed mb-4">
+                            Desain ornamen vektor visual, ikon flat, elemen grafis bertema pendidikan, flora fauna, serta komponen siap pakai untuk berbagai kebutuhan tata letak media.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t-2 border-dashed border-gray-300 flex justify-between items-center text-xs font-bold text-emerald-800">
+                        <span><i class="fa-solid fa-shapes text-emerald-600"></i> Modular Vector</span>
+                        <span class="font-extrabold">Ready-to-Use Vector</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact" class="max-w-6xl mx-auto px-4 md:px-8 pt-6 pb-16">
+        <div class="bg-popYellow border-pop rounded-3xl p-6 md:p-12 shadow-pop-xl relative overflow-hidden">
+            
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="bg-popRed text-white font-fun font-bold text-xs px-4 py-1.5 rounded-full border-pop shadow-pop uppercase tracking-wider inline-block mb-3">
+                    📬 Mari Bekerja Sama & Berkolaborasi!
+                </span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-popDark leading-tight">
+                    Hubungi <span class="text-popRed">FINZA DWI KIRANA</span>
+                </h2>
+                <p class="text-gray-800 font-medium text-sm sm:text-base mt-2">
+                    Siap membantu kebutuhan Desain Grafis, Visual Branding, Maskot Vektor, Kemasan Produk, UI/UX, maupun Video Editing Anda.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                
+                <!-- Left Side: Primary Direct Contact (WhatsApp, Email & Location) -->
+                <div class="lg:col-span-5 flex flex-col gap-4 justify-between">
+                    
+                    <!-- WhatsApp Direct Card -->
+                    <a href="https://wa.me/6287798160888" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-green-50 text-popDark border-pop p-5 rounded-3xl shadow-pop transition-all hover:scale-[1.02] group flex items-center gap-4">
+                        <div class="w-14 h-14 bg-green-500 text-white rounded-2xl border-pop flex items-center justify-center text-3xl shrink-0 group-hover:rotate-12 transition-transform shadow-pop-sm">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <span class="bg-green-100 text-green-800 text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded border-pop-sm font-fun">WhatsApp Utama</span>
+                            <h3 class="font-fun font-extrabold text-xl text-popDark mt-1">087798160888</h3>
+                            <p class="text-xs font-semibold text-gray-500 mt-0.5">Klik untuk kirim pesan cepat</p>
+                        </div>
+                    </a>
+
+                    <!-- Email Direct Card -->
+                    <a href="mailto:finzadwikirana123@gmail.com" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-red-50 text-popDark border-pop p-5 rounded-3xl shadow-pop transition-all hover:scale-[1.02] group flex items-center gap-4">
+                        <div class="w-14 h-14 bg-popRed text-white rounded-2xl border-pop flex items-center justify-center text-3xl shrink-0 group-hover:rotate-12 transition-transform shadow-pop-sm">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <span class="bg-red-100 text-popRed text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded border-pop-sm font-fun">Email Resmi</span>
+                            <h3 class="font-fun font-extrabold text-sm sm:text-base text-popDark mt-1 break-all">finzadwikirana123@gmail.com</h3>
+                            <p class="text-xs font-semibold text-gray-500 mt-0.5">Kirim penawaran kerja / kerjasama</p>
+                        </div>
+                    </a>
+
+                    <!-- Location & Education Summary Badge -->
+                    <div class="bg-white/95 border-pop p-4 rounded-2xl text-xs font-bold flex flex-col gap-1.5 shadow-pop-sm">
+                        <div class="flex items-center justify-between">
+                            <span class="flex items-center gap-2 text-popDark">
+                                <i class="fa-solid fa-location-dot text-popRed text-base"></i> Kebumen, Jawa Tengah, Indonesia
+                            </span>
+                            <span class="bg-popYellow px-2.5 py-0.5 rounded-lg border-pop-sm text-[10px] font-fun">Mahasiswa Aktif</span>
+                        </div>
+                        <p class="text-gray-600 font-semibold text-[11px]">Universitas Putra Bangsa Kebumen</p>
+                    </div>
+
+                </div>
+
+                <!-- Right Side: ALL SOSIAL MEDIA LINKS -->
+                <div class="lg:col-span-7 bg-white border-pop rounded-3xl p-6 shadow-pop space-y-4">
+                    <div class="flex items-center justify-between border-b-2 border-pop pb-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-popPink text-white rounded-xl border-pop flex items-center justify-center text-xl font-bold shadow-pop-sm">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-fun font-extrabold text-xl text-popDark leading-tight">Instagram Resmi</h3>
+                                <p class="text-xs font-semibold text-gray-600">Klik tautan di bawah ini untuk membuka profil Instagram:</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Instagram Link 1: Personal Main Account -->
+                    <a href="https://www.instagram.com/finza_dwikirana" target="_blank" rel="noopener noreferrer" class="p-4 bg-yellow-100 hover:bg-yellow-200 border-pop rounded-2xl flex items-center justify-between gap-3 transition-all group hover:shadow-pop">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-popYellow text-popDark rounded-xl border-pop flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform shadow-pop-sm">
+                                <i class="fa-solid fa-user-astronaut"></i>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-1.5 mb-0.5">
+                                    <span class="bg-white text-popDark text-[9px] font-extrabold uppercase px-2 py-0.5 rounded border-pop-sm font-fun">Akun Utama / Personal</span>
+                                </div>
+                                <h4 class="font-fun font-extrabold text-lg text-popDark">@finza_dwikirana</h4>
+                            </div>
+                        </div>
+                        <span class="bg-popYellow text-popDark px-4 py-2 rounded-xl border-pop-sm text-xs font-fun font-bold flex items-center gap-1.5 shrink-0">
+                            Buka <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </span>
+                    </a>
+
+                    <!-- Instagram Link 2: Graphic Design Portfolio Account (@finza_graphicdesign__pemula) -->
+                    <a href="https://www.instagram.com/finza_graphicdesign__pemula" target="_blank" rel="noopener noreferrer" class="p-4 bg-pink-100 hover:bg-pink-200 border-pop rounded-2xl flex items-center justify-between gap-3 transition-all group hover:shadow-pop">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-popPink text-white rounded-xl border-pop flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform shadow-pop-sm">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-1.5 mb-0.5">
+                                    <span class="bg-white text-popPink text-[9px] font-extrabold uppercase px-2 py-0.5 rounded border-pop-sm font-fun">Portofolio Desain Grafis</span>
+                                </div>
+                                <h4 class="font-fun font-extrabold text-lg text-popDark">@finza_graphicdesign__pemula</h4>
+                            </div>
+                        </div>
+                        <span class="bg-popPink text-white px-4 py-2 rounded-xl border-pop-sm text-xs font-fun font-bold flex items-center gap-1.5 shrink-0">
+                            Buka Instagram <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </span>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom Note -->
+            <div class="mt-8 pt-5 border-t-2 border-pop flex flex-col sm:flex-row justify-between items-center text-xs font-bold text-gray-800">
+                <span>© 2026 FINZA DWI KIRANA. All Rights Reserved.</span>
+                <span class="mt-2 sm:mt-0 bg-white px-3.5 py-1.5 rounded-full border-pop-sm shadow-pop-sm font-fun">
+                    MAHASISWA AKTIF UNIVERSITAS PUTRA BANGSA 🎨
+                </span>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Modal Preview PDF -->
+    <div id="pdfModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white border-pop rounded-3xl w-full max-w-2xl flex flex-col shadow-pop-xl overflow-hidden relative">
+            
+            <!-- Modal Header -->
+            <div class="bg-popYellow border-b-2 border-pop p-4 flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-file-pdf text-popRed text-2xl"></i>
+                    <div>
+                        <h3 class="font-fun font-bold text-base text-popDark">PORTOFOLIO FINZA DWI KIRANA.pdf</h3>
+                        <p class="text-[10px] font-semibold text-gray-700">Dokumen Portofolio Resmi Terbaru DKV Kebumen</p>
+                    </div>
+                </div>
+                <button onclick="closePdfModal()" class="w-9 h-9 bg-popRed text-white rounded-xl border-pop shadow-pop flex items-center justify-center font-bold hover:bg-red-600 transition-colors">
+                    ✕
+                </button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-8 bg-gray-50 flex flex-col items-center justify-center text-center">
+                <div class="w-16 h-16 bg-popBlue text-popDark rounded-2xl border-pop shadow-pop flex items-center justify-center text-3xl mb-4">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h4 class="font-fun font-extrabold text-2xl text-popDark mb-2">Dokumen PDF Resmi Siap Diakses!</h4>
+                <p class="text-xs text-gray-600 font-medium max-w-md mb-6 leading-relaxed">
+                    Dokumen ini berisi rangkuman karya visual lengkap Finza Dwi Kirana: Logo UMKM, Maskot Burung & Daun, Branding Kebumen, UI/UX Formiq, Videografi Batik, Sertifikat LKS 2026, dan 10.000+ Aset Microstock.
+                </p>
+                <div class="flex justify-center gap-3">
+                    <button onclick="closePdfModal()" class="bg-gray-200 hover:bg-gray-300 text-popDark border-pop px-5 py-2.5 rounded-xl font-fun font-bold text-xs shadow-pop">
+                        Tutup
+                    </button>
+                    <a href="https://www.pdffiller.com/s/CNaAyOT4Xe" target="_blank" rel="noopener noreferrer" onclick="closePdfModal(); showToast('📄 Membuka link PDF Portofolio...');" class="bg-popRed hover:bg-red-600 text-white border-pop px-6 py-2.5 rounded-xl font-fun font-bold text-xs shadow-pop flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Unduh / Buka PDF
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Toggle Mobile Navigation Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.add('hidden');
+        }
+
+        // Filter Portfolio Items in Gallery
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.portfolio-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Reset Active Class on Filter Buttons
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-popYellow', 'active');
+                btn.classList.add('bg-white');
+            });
+
+            // Set Active Style for Clicked Button
+            if (event && event.currentTarget) {
+                event.currentTarget.classList.remove('bg-white');
+                event.currentTarget.classList.add('bg-popYellow', 'active');
+            }
+
+            // Filter Cards
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // PDF Modal Popup Logic
+        function openPdfModal() {
+            document.getElementById('pdfModal').classList.remove('hidden');
+        }
+
+        function closePdfModal() {
+            document.getElementById('pdfModal').classList.add('hidden');
+        }
+
+        // Show Toast Notification
+        function showToast(message) {
+            const existingToasts = document.querySelectorAll('.toast-msg');
+            existingToasts.forEach(t => t.remove());
+
+            const toast = document.createElement('div');
+            toast.className = 'toast-msg fixed bottom-6 right-6 bg-popDark text-white border-pop px-5 py-3.5 rounded-2xl shadow-pop-lg font-fun font-bold z-50 flex items-center gap-3 animate-bounce';
+            toast.innerHTML = `<i class="fa-solid fa-circle-check text-popGreen text-xl"></i> ${message}`;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 4000);
+        }
+    </script>
+</body>
+</html>
